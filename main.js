@@ -1,81 +1,32 @@
-
-
-
-let nombre = prompt("ingrese su nombre");
-let apellido = prompt("ingrese su apellido");
-if (nombre != "" && apellido != "") {
-    alert(`Hola ${nombre} ${apellido}!!` );
+let datoNombre = prompt("Ingrese su nombre");
+while (datoNombre === "") {
+    alert("Nombre requerido!");
+datoNombre = prompt("Ingrese su nombre");
 }
-else{
-    alert("el nombre y apellido se requieren");
+    alert("Bien!! ");
+let datoApellido = prompt("Ingrese su apellido");
+while (datoApellido === ""){
+      alert("Apellido requerido!")
+  datoApellido = prompt("Ingrese su apellido");
 }
-
-
-let edad = parseInt(prompt("Ingrese su edad"));
-        alert(`su edad es:${edad}`);
-        alert(`su nombre es:${nombre} ${apellido}`)
-let respuesta = prompt("Los datos son correctos?")        
-        if ( respuesta === "si"){
-            alert("Podemos continuar!!")  
-        }
-        else{
-            alert("Por favor vuelve a ingresar tus datos")
-        }
-
-
-
-let numero = prompt("Ingresar un numero del 1 al 10");
-while (numero != "ESC") {
-    switch (numero) {
-        case "1":
-            alert("su precio es: $150");
-            break;
-        case "2":
-            alert("su precio es: $200");
-            break;
-        case "3":
-            alert("su precio es: $250");
-            break;
-        case "4":
-            alert("su precio es: $300");
-            break;
-        case "5":
-            alert("su precio es: $350");
-            break;
-        case "6":
-            alert("su precio es: $400");
-            break;
-        case "7":
-            alert("su precio es: $450");
-            break;
-        case "8":
-            alert("su precio es: $500");
-            break;
-        case "9":
-            alert("su precio es: $550");
-            break;
-        case "10":
-            alert("su precio es: $600");
-            break;           
-            default:
-            alert("numero incorrecto");
-            break;
-        }
-        numero = prompt("Ingrese ESC para terminar");
-    } 
-
-let precio;
-let cantidad;
-let desc;
-let comprar;
-let pagar;
-precio = parseFloat(prompt("Ingrese precio"));
-cantidad= parseFloat(prompt("Ingrese cantidad"));
-alert("Tiene un descuento del 20%")
-compra = precio * cantidad;
-desc = compra * 0.20;
-pagar = compra - desc;
-console.log(desc)
-console.log(pagar)
-    alert("el descuento es:" + desc);
-    alert("el total a pagar es:" + pagar)
+    alert("Bien!!")
+    alert(`¡Hola ${datoNombre} ${datoApellido}!`)
+    alert("Bienvendio a mi tienda online!!") 
+    alert("Tenemos para ofrecerte las siguiente prendas..")
+    alert("Calsa negra $5000")
+    alert("Buzo $7000")
+    alert("Conjunto deportivo $10000")
+    alert("Camiseta gris $6000")
+    alert("Eliga la prenda que quiere comprar con su precio")
+let precioElegido = parseFloat(prompt("Ingrese el precio de la prenda"));
+let cantidadProductos = parseFloat(prompt("Ingrese la cantidad"));
+let descuentoPrincipal = 0.20;
+const calculoUno = (a,b) => a * b ;
+const calculoDos = (a,b) => a - b ;
+let resultadoMultiplicacion = calculoUno (precioElegido,cantidadProductos );
+let resultadoDescuento = calculoUno (resultadoMultiplicacion,descuentoPrincipal);
+let resultadoFinal = calculoDos (resultadoMultiplicacion,resultadoDescuento)
+    alert(`Su total a pagar es:${resultadoMultiplicacion}`);
+    alert("tenemos un descuento del 20%");
+    alert(`Su total a pagar con el descuento es:${resultadoFinal}`);
+    alert("Gracias por su compra!")
