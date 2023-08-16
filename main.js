@@ -33,11 +33,10 @@ const camisaUno ={
         stock:10,
         talle:"XL L M S"
     }
-    alert("Tenemos los siguintes productos..");
     alert(`Calsa Negra: $${calsaNegra.precio}`);
     alert(`Buzo: $${buzoRustico.precio}`);
-    alert(`Camisa: $${camisaUno.precio}`);
     alert(`Conjunto Deportivo: $${conjuntoDeportivo.precio}`);
+    alert(`Camisa: $${camisaUno.precio}`);
     alert("Tenemos en stock..");
     alert(`Calsa Negra: ${calsaNegra.stock} unidades`);
     alert(`Buzo: ${buzoRustico.stock} unidades`);
@@ -73,6 +72,7 @@ let mensaje =`
     alert(`Calsa Negra: $${calsaNegra.precio}`);
     alert(`Buzo: $${buzoRustico.precio}`);
     alert(`Conjunto Deportivo: $${conjuntoDeportivo.precio}`);
+    alert(`Camisa: $${camisaUno.precio}`);
 }
     alert("ingrese el precio del producto")
 let precioElegido = parseFloat(prompt("Ingrese el precio del producto"));
